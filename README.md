@@ -17,6 +17,7 @@ pucli static void main(){
 ```
 
 ## 系统的问题
-虽然JNI库libsimp.so同时依赖了libgperf.so和libmedia5.so，而且这两个so都打包进APK中，安装在 /lib/armeabi-v7a/下。但是通过native libs monitor这个app的查看，libsimp.so却依赖了libgperf.so和系统的`libmedia.so`。
+虽然JNI库libsimp.so同时依赖了libgperf.so和libmedia5.so，而且这两个so都打包进APK中，安装在 /lib/armeabi-v7a/下。<br>
+但是通过native libs monitor这个app的查看，libsimp.so却依赖了libgperf.so和系统的`libmedia.so`。<br>
 其实，及时不将libmedia5.so打包进APK中，安装后app还是可以正常运行的。
 
